@@ -7,9 +7,9 @@
 @theme-text-color-normal:    mix(@syntax-background-color, @theme-text-color-accent, 32%);
 @theme-text-color-subtle:    mix(@syntax-background-color, @theme-text-color-accent, 64%);
 
-@theme-background-color:         @syntax-background-color;
-@theme-background-color-light:   desaturate(lighten(@syntax-background-color, 3%), 2%);
-@theme-background-color-lighter: desaturate(lighten(@syntax-background-color, 10%), 2%);
+@theme-background-color:         darken(@syntax-text-color, 17);
+@theme-background-color-light:   desaturate(lighten(@theme-background-color, 3%), 2%);
+@theme-background-color-lighter: desaturate(lighten(@theme-background-color, 10%), 2%);
 
 @theme-blue:   @syntax-color-renamed;
 @theme-green:  @syntax-color-added;
@@ -18,29 +18,29 @@
 
 
 // Editor colors ---------------------------------------------------------------
-@indent-guide-color: @theme-background-color-light;
-@invisibles-color: @theme-background-color-light;
+// @indent-guide-color: @theme-background-color-light;
+// @invisibles-color: @theme-background-color-light;
 
-@gutter-background-color: transparent;
-@gutter-text-color: @theme-text-color-subtle;
-@gutter-text-color-selected: @theme-text-color-highlight;
+// @gutter-background-color: transparent;
+// @gutter-text-color: @theme-text-color-subtle;
+// @gutter-text-color-selected: @theme-text-color-highlight;
 
 @theme-syntax-text-color:            @syntax-text-color;
-@theme-syntax-cursor-color:          @syntax-text-color;
-@theme-syntax-selection-color:       lighten(@syntax-background-color, 10%);
+@theme-syntax-cursor-color:          @syntax-cursor-color;
+@theme-syntax-selection-color:       @syntax-selection-color;
 @theme-syntax-background-color:      @syntax-background-color;
 
-@theme-syntax-wrap-guide-color:          @theme-background-color-light;
-@theme-syntax-indent-guide-color:        @theme-background-color-light;
-@theme-syntax-invisible-character-color: @theme-background-color-light;
+@theme-syntax-wrap-guide-color:          @syntax-wrap-guide-color;
+@theme-syntax-indent-guide-color:        @syntax-indent-guide-color;
+@theme-syntax-invisible-character-color: @syntax-invisible-character-color;
 
 //@theme-syntax-result-marker-color:          @syntax-fg;
 //@theme-syntax-result-marker-color-selected: @syntax-accent;
 
-@theme-syntax-gutter-text-color:                @theme-text-color-subtle;
-@theme-syntax-gutter-text-color-selected:       @theme-text-color-highlight;
-@theme-syntax-gutter-background-color:          @theme-background-color;
-@theme-syntax-gutter-background-color-selected: fade(@theme-background-color-lighter, 10%);
+@theme-syntax-gutter-text-color:                @syntax-gutter-text-color;
+@theme-syntax-gutter-text-color-selected:       @syntax-gutter-text-color-selected;
+@theme-syntax-gutter-background-color:          @syntax-gutter-background-color;
+@theme-syntax-gutter-background-color-selected: @syntax-gutter-background-color-selected;
 
 // Main colors -----------------------------------------------------------------
 @base-background-color: @theme-background-color;
